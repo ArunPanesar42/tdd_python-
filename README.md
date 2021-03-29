@@ -13,6 +13,8 @@
 - Write code to pass the test - `GREEN`
 - Refactor code for next test - `BLUE`
 
+![TDD](https://github.com/ArunPanesar42/tdd_python-/blob/main/TDD.png?raw=true)
+
 ```python
 def greeting(name):
     return "Hello" + name
