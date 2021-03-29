@@ -39,4 +39,51 @@ def thanks(name):
 
 - Let's create a file called 
 `test_unittest_simplecalc.py` 
-- Naming is very important as it shows what need to be tested 
+- Naming is very important as it shows what need to be tested
+
+### SIMPLE CALCULATOR 
+- Here we are creating a simple calculator 
+- This is our code
+```python
+from simple_calc import SimpleCalc
+# importing the file where we would write our code
+import unittest
+# importing unittest to inherit TestCase to create our tests against the code
+
+
+class CalcTest(unittest.TestCase):
+
+    calc = SimpleCalc()
+
+    def test_add(self):     # Naming convention - using "test" before or after when naming our function will let python interpreter know that this needs to be tested
+        self.assertEqual(self.calc.add(2, 4), 6) # This test is checking "2 + 4 = 6", if true it will pass
+
+    def test_subtract(self):
+        self.assertEqual(self.calc.subtract(4, 2), 2)
+        # This test is checking if "4 - 2 = 2", if true it will pass
+
+    def test_multiply(self):
+        self.assertEqual(self.calc.multiply(2, 2), 4)
+        # This test will check if 2 x 2 = 4
+
+    def test_divide(self):
+        self.assertEqual(self.calc.divide(15, 3), 5)
+        # This test will check "15 / 3 = 5"
+```
+- Next we need to run out test, use use ` python -m pytest` to test code, here is the other file 
+```python
+class SimpleCalc():  # pass
+
+    def add(self, value1, value2):
+        return value1 + value2
+
+    def subtract(self, value1, value2):
+        return value1 - value2
+
+    def multiply(self, value1, value2):
+        return value1 * value2
+
+    def divide(self, value1, value2):
+        return value1 / value2
+
+```
