@@ -87,3 +87,16 @@ class SimpleCalc():  # pass
         return value1 / value2
 
 ```
+### UNIT TESTING 
+- We can unittest by adding `python -m unittest discover -v` in the console
+```
+test_add (test_unittest_simplecalc.CalcTest) ... ok
+test_divide (test_unittest_simplecalc.CalcTest) ... ok
+test_multiply (test_unittest_simplecalc.CalcTest) ... ok
+test_subtract (test_unittest_simplecalc.CalcTest) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.002s
+
+OK
+```
